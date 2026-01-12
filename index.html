@@ -262,7 +262,7 @@ a:hover {
     <h3>Contact</h3>
     <p>Vous pouvez me contacter via ce formulaire :</p>
 
-    <form class="contact-form" onsubmit="return handleSubmit(event)">
+   <form class="contact-form" action="https://formspree.io/f/xqeeklap" method="POST">
       <input type="text" name="name" placeholder="Nom ou entreprise" required />
       <input type="email" name="email" placeholder="Mail" required />
       <textarea name="message" rows="4" placeholder="Message" required></textarea>
@@ -288,14 +288,10 @@ a:hover {
 
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
-  function handleSubmit(e) {
-    e.preventDefault();
-    alert("Message envoyé ! (formulaire de démonstration)");
-    e.target.reset();
-    return false;
-  }
+  
 </script>
 
 </body>
 </html>
+
 
