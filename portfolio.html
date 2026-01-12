@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio – Étudiant</title>
+  <style>
+    :root {
+      --bg: #0b1120;
+      --card: #0f172a;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --accent: #60a5fa;
+      --border: rgba(255,255,255,0.08);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: radial-gradient(circle at top, #0f172a, #020617 70%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      max-width: 1100px;
+      margin: auto;
+      padding: 3rem 1.5rem 2rem;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    header h1 { font-size: 2.2rem; }
+    header p { color: var(--muted); margin-top: 0.4rem; }
+
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      margin-left: 1rem;
+      font-size: 0.95rem;
+    }
+
+    nav a:hover { color: var(--text); }
+
+    .hero {
+      max-width: 1100px;
+      margin: auto;
+      padding: 2rem 1.5rem 3rem;
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 2rem;
+    }
+
+    .hero-card {
+      background: rgba(15,23,42,0.75);
+      border: 1px solid var(--border);
+      border-radius: 1.25rem;
+      padding: 2rem;
+      backdrop-filter: blur(8px);
+    }
+
+    .hero h2 { font-size: 1.8rem; margin-bottom: 0.5rem; }
+
+    .tag {
+      display: inline-block;
+      background: rgba(96,165,250,0.15);
+      color: var(--accent);
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      margin-right: 0.4rem;
+      margin-top: 0.5rem;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 0 1.5rem 4rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: rgba(15,23,42,0.75);
+      border: 1px solid var(--border);
+      border-radius: 1.25rem;
+      padding: 1.5rem;
+      backdrop-filter: blur(8px);
+    }
+
+    .card h3 { margin-bottom: 0.5rem; }
+    .card p { color: var(--muted); font-size: 0.95rem; }
+
+    .project {
+      margin-top: 0.8rem;
+      padding-top: 0.8rem;
+      border-top: 1px solid var(--border);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 800px) {
+      header { grid-template-columns: 1fr; text-align: center; }
+      nav { margin-top: 0.5rem; }
+      .hero { grid-template-columns: 1fr; }
+    }
+      .contact-form {
+      margin-top: 1rem;
+      display: grid;
+      gap: 0.6rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      border-radius: 0.6rem;
+      padding: 0.6rem 0.7rem;
+      color: var(--text);
+      font-family: inherit;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+
+    .contact-form button {
+      margin-top: 0.4rem;
+      background: var(--accent);
+      color: #020617;
+      border: none;
+      padding: 0.6rem;
+      border-radius: 0.6rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .contact-form button:hover {
+      opacity: 0.9;
+    }
+
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+      border: 2px solid var(--accent);
+    }
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+    .download-btn {
+  display: inline-block;
+  margin-top: 0.8rem;
+  background: var(--accent);
+  color: #020617;
+  padding: 0.6rem 1rem;
+  border-radius: 0.6rem;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.download-btn:hover {
+  opacity: 0.9;
+}
+
+
+  </style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>Antonin Bérard</h1>
+    <p>Étudiant en bachelor génie civil – Portfolio numérique</p>
+  </div>
+  <nav>
+    <a href="#profil">Profil</a>
+    <a href="#competences">Compétences</a>
+    <a href="#projets">Projets</a>
+    <a href="#contact">Contact</a>
+    <a href="#cv">CV</a>
+  </nav>
+</header>
+
+<section class="hero" id="profil">
+  <div class="hero-card">
+    <h2>Profil</h2>
+
+<img src="identité.jpg" alt="Photo de profil" class="profile-pic">
+
+    <p>
+      Je suis étudiant en bachelor génie civil et je m’intéresse particulièrement à la maîtrise d'ouvrage.
+      Ce portfolio présente mes compétences, mes projets scolaires et mon parcours.
+    </p>
+    <div>
+      <span class="tag">Motivé</span>
+      <span class="tag">Organisé</span>
+      <span class="tag">Autonome</span>
+    </div>
+  </div>
+
+  <div class="hero-card">
+    <h2>Informations</h2>
+    <p><strong>École :</strong> Centrale Lyon ENISE</p>
+    <p><strong>Formation :</strong> Bachelor mutation technologique Génie Civil et environnement</p>
+    <p><strong>Année :</strong> 2025 – 2026</p>
+  </div>
+</section>
+
+<main>
+  <section class="card" id="cv">
+    <h3>Curriculum Vitae</h3>
+    <p>Tu peux télécharger mon CV au format PDF :</p>
+    <a href="cv.pdf" class="download-btn" download>Télécharger mon CV</a>
+  </section>
+
+  
+  <section class="card" id="competences">
+    <h3>Compétences</h3>
+    <p>Voici un aperçu de mes compétences actuelles :</p>
+    <div class="project">• AutoCad</div>
+    <div class="project">• Bureautique (Word, PowerPoint, Excel)</div>
+    <div class="project">• Travail en équipe</div>
+  </section>
+
+  <section class="card" id="projets">
+    <h3>Projets scolaires</h3>
+
+    <div class="project">
+      <strong>Portfolio numérique</strong>
+      <p>Création d’un site web personnel pour présenter mon profil et mes compétences.</p>
+    </div>
+
+    <div class="project">
+      <strong>Projet n°2</strong>
+      <p>Description courte du projet (objectif, outils utilisés, résultats).</p>
+    </div>
+
+  </section>
+
+  <section class="card" id="contact">
+    <h3>Contact</h3>
+    <p>Vous pouvez me contacter via ce formulaire :</p>
+
+    <form class="contact-form" onsubmit="return handleSubmit(event)">
+      <input type="text" name="name" placeholder="Nom ou entreprise" required />
+      <input type="email" name="email" placeholder="Mail" required />
+      <textarea name="message" rows="4" placeholder="Message" required></textarea>
+      <button type="submit">Envoyer</button>
+    </form>
+
+    <p style="margin-top:1rem">Ou directement :</p>
+    <p>Email : antonin.berard@enise.fr</p>
+    <p>
+  LinkedIn :
+  <a href="https://www.linkedin.com/in/antonin-berard" target="_blank">
+    linkedin.com/in/antonin-berard
+  </a>
+</p>
+
+    <p>Téléphone : 07 86 12 31 57<p>
+  </section>
+</main>
+
+<footer>
+  © <span id="year"></span> Antonin Bérard – Portfolio scolaire
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+  function handleSubmit(e) {
+    e.preventDefault();
+    alert("Message envoyé ! (formulaire de démonstration)");
+    e.target.reset();
+    return false;
+  }
+</script>
+
+</body>
+</html>
